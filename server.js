@@ -2,6 +2,7 @@ const express = require('express');
 const server = express();
 const configureMiddleware = require('./middleware');
 const zoos = require('./routes/zoos-router');
+const bears = require('./routes/bears-router');
 
 configureMiddleware(server);
 
@@ -10,5 +11,6 @@ server.get('/', (req, res) => {
   });  
 
 server.use("/api/zoos", zoos);
+server.use("/api/bears", zoos);
 
 module.exports = server;
