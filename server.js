@@ -1,7 +1,7 @@
 const express = require('express');
 const server = express();
 const configureMiddleware = require('./middleware');
-const zoos = require('./routes/zoos');
+const zoos = require('./routes/zoos-router');
 
 configureMiddleware(server);
 
