@@ -11,6 +11,6 @@ server.get('/', (req, res) => {
   });  
 
 server.use("/api/zoos", zoos);
-server.use("/api/bears", zoos);
+server.use("/api/bears", bears);
 
 module.exports = server;
