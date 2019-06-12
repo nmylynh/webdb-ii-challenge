@@ -50,18 +50,22 @@ function findById(id) {
     .first()
 }
 
-function add(zoo) {
-    return db('zoos')
-    .insert(zoo, 'id')
-    .then
+async function add(zoo) {
+const [id] = await db('zoos').insert(zoo);
+
+return findById(id);
 }
 
 function update(id, changes) {
-    return null
+    return db('zoos')
+    .where({ id })
+    .update(changes, '*')
 }
 
 function remove(id) {
-    return null
+    return db('zoos')
+    .where({ id })
+    .del();
 }
 
 
