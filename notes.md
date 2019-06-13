@@ -11,7 +11,7 @@ Therefore, API --> translator --> database connector --> database
 To install required dependencies:
 1.) install knex and driver:
 
-npm i knex sqlite 3
+npm i knex sqlite3
 
 2.) configure knex and get a connection to the database
     a.) knex needs to figure out which db driver to use (refer to the diagram above), in this case it is called a client, and the package that we had installed, the npm module, is sqlite3.
